@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Unidades #01</title>
+    <style>
+        /* viewport tamanho da página
+        vw - tamanho do viewport dividido por 100 tanto na altura e na largura
+        1vh significa 1/100 da altura
+        1vw significa 1/100 da largura
+        vmin e vmax fica variando dependendo das dimenssões do viewport
+         */
+         .unidades-absolutas {
+             position: absolute; /* não significa que as unidades são absolutas - para posicionar a DIV de
+              forma absoluta dentro do ViewPort */
+             font-size: 40px;
+             padding: 20px;
+             border: solid 5px #222;
+             margin: 30px;
+             width: 4cm; /* pouco usado */
+             top: 150px; /* distancia do topo da pagina pra sua DIV vai ser 150px*/
+             left: 200px;
+         }
+
+         .unidades-relativas {
+             position: absolute;
+             font-size: 4em;
+             padding: 5%;
+             border: solid 1vw #222;
+             margin: .8%;
+             height: 20vw;
+             height: 5%;
+             bottom: 5%;
+             right: 5%;                          
+         }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="unidades-absolutas">Opa!</div>
+    <div class="unidades-relativas">Epa!</div>
+</body>
+
+</html>

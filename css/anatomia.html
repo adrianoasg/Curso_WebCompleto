@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Anatomia CSS</title>
+    <style> /*Case sensitive*/
+        .seletor {
+            color: #fff;
+            font-size: 30px;
+            text-align: center; /*valor predefinido*/
+            /* Multiplos valores*/
+            border: solid 5px navy; /* shorthand property*/
+            font-family: Helvetica, sans-serif; /* se a primeira fonte não tiver disponível usará a segunda */
+            /*Funções*/
+            width: calc(100% - 40px);
+            background-color: rgb(34, 153, 189)
+        }
+
+        /*Usando uma pseudo-classe*/
+        .seletor:hover {
+            background-color: orangered; /*mudar a cor do componente quando passa o mouse em cima*/
+        }
+
+        /*Usando um pseudo-elemento*/
+        .seletor::first-letter { /*usa dois pontos*/
+            font-size: 60px; /*A primeira letra maior*/
+            font-weight: bold;
+        }
+        /*Padrão de nomeclatura?*/
+        /*dash-case ou camelCase?*/
+        /*Mantenha sempre o mesmo padrão - dash-case recomendado*/
+    </style>
+</head>
+<body>
+    <div class="seletor">Conteúdo</div>
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Selectors</title>
+    <link rel="stylesheet" href="css/tag.css">
+    <style>
+       /* Seletor Universal
+       * {
+            color: #ff0;
+            background-color: #f77;
+        }
+        */
+        /* Seletor DE Classe
+        .tag {
+            color: #ff0;
+            background-color: #f77;
+        }
+        */
+        
+        /* Seletor ID
+        #aprovados {
+            color: #ff0;
+            background-color: #f77;
+        }
+        */
+
+        /* Seletor descedente direto
+        #aninhado > div {
+            color: #ff0;
+            background-color: #f77;
+        }
+        */
+        
+        /* Seletor descedente geral
+        #aninhado section {
+            color: #ff0;
+            background-color: #f77;
+        }
+        */
+        
+        /*sinblins adjacentes - vizinhos
+        p + ul {
+            color: #ff0;
+            background-color: #f77;
+        }
+        */ 
+        /* general sinblins
+        p ~ ol {
+            color: #ff0;
+            background-color: #f77;
+        }
+        */
+        
+        /* Seletor Propriedade
+        [feira] { /* ou [feira = casa], [feira ~= casa] ou [feira *= sa]
+            color: #ff0;
+            background-color: #f77;
+        }
+        */
+        /* Seletor - me de algum span que é filho de alguém - lembre de colocar nolabel por causa do tag.css
+        span::nth-child(1) {
+            color: #ff0;
+            background-color: #f77;
+        }
+        */
+    /*Seletor - filhos ímpares
+        section > :nth-child(odd) {
+            color: #ff0;
+            background-color: #f77;
+        }
+        */
+
+        /*Seletor - filhos pares
+        section > :nth-child(even) {
+            color: #ff0;
+            background-color: #f77;
+        }
+        */
+
+        /*Para mais elementos
+        section > :nth-child(odd), ul, p {
+            color: #ff0;
+            background-color: #f77;
+        }
+        */
+
+        /* Descendente
+        section > :nth-child(odd) label {
+            color: #ff0;
+            background-color: #f77;
+        }
+    */
+        
+    /* seletor - me de o segundo elemento dentro da section que representa um span - começa apartir do 1*/
+        section > span:nth-of-type(2) {
+            color: #ff0;
+            background-color: #f77;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class='tag'>
+        <div class='tag'>
+            <p class='tag'>1</p>
+            <ul class='tag' feira='casa'>
+                <li>Arroz</li>
+                <li>Feijão</li>
+            </ul>
+            <ul class='tag' feira='escritorio empresa'>
+                <li>Café</li>
+                <li>Água</li>
+            </ul>
+            <ol id='aprovados' class='tag'>
+                <li>Maria</li>
+                <li>Pedro</li>
+                <li>Ana</li>
+            </ol>
+            <div id='aninhado' class='tag'>
+                <div class="tag">
+                    <section class='tag'>
+                        <span class='tag'>1</span>
+                        <p class='tag'>2</p>
+                        <span class='tag'>3</span>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/tag.js"></script>
+</body>
+
+</html>

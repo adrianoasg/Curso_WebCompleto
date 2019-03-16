@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cores</title>
+    <style>
+        /* 
+            https://www.w3schools.com/colors/colors_hsl.asp
+            
+            https://coolors.co/
+            http://paletton.com/
+        */
+
+        body {
+            background-color:green;
+            background-color: #f67809; /*variaçõs do vermelho, verde e azul - valores hexadecimal*/
+            background-color: #aabbcc; 
+            background-color: #abc; /*versão simplificada*/
+            background-color:#edc91280; /*80 - cor com transparencia - 00 tranparencia completa*/
+            background-color: rgb(55, 110, 220); /*variaçõs do vermelho, verde e azul - Base Decimal de 0 a 255*/
+            background-color: rgba(55, 110, 220, .5); /*Com transparencia*/
+            /*hue, saturation e lightness*/
+            background-color: hsl(299, 58%, 50%); /*hue 0 a 360, saturation 0(escala de cinza) a 100%(cor mais forte possivel),
+             lightness 0 a 100%(50% cor mais pura possivel, 100% fica branco pro lado do 0% mais escura)*/
+             background-color: hsla(299, 58%, 50%, 0.5); /*com transparencia*/
+        }
+        div {
+            font-size: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>teste</h1> <!--font size 2em-->
+    <div>
+        <h1>teste</h1> <!--Colocando no Style div{ font-size: 100px; ela ficará com 200px }-->
+    </div>
+</body>
+
+</html>

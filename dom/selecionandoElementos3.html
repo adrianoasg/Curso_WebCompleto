@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Selecionar Elementos #03</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        form input,
+        form select,
+        form button {
+            margin: 10px;
+            font-size: 1.6em;
+        }
+    </style>
+</head>
+<!-- os names- pesquisa, q e hl são parametros usados na pesquisa do google
+no navegador - wwww.google.com.br/search?q=Windwos&hl=pt-br
+pessquisa Windows em portugues  -->
+<body class="conteudo exercicio">
+    <h1>Formulário</h1>
+    <form name="pesquisa" action="http://www.google.com.br/search">
+        <input type="text" name="q" placeholder="Digite o termo..."> 
+        <select name="hl">
+            <option value="pt-br">Português (Brasil)</option>
+            <option value="en-us">Inglês (Americano)</option>
+        </select>
+        <button>Pesquisar</button>
+    </form>
+    <script>
+        console.log(document.forms)
+        console.log(document.forms[0])
+        console.log(document.getElementsByName('pesquisa')) //retorna NodeList
+        console.log(document.getElementsByTagName('form')) //retorna Html collection
+        console.log(document.pesquisa)
+        console.log(document.pesquisa.q)
+        document.pesquisa.q.value = 'Linux Brasil' //input - altera o valor do campo apartir dos names 
+        //document.pesquisa.hl.value = 'en-us' //alterando no select
+        console.log(document.pesquisa.hl.selectedIndex)
+    </script>
+</body>
+
+</html>

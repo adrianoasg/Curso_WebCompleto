@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Herança</title>
+    <!-- <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Aladin" rel="stylesheet"> 
+    <style>
+        body{
+            font-family: 'Aladin', cursive;
+            /*font-family: 'Oswald', sans-serif;*/
+            font-size: 40px;
+            border: solid 3px red; /*Borda não é transmitida por Herança*/
+            padding: 50px; /*Padding não é transmitida por Herança - 
+            Box model - apenas um valor aplica no topo/direita, em baixo e na esquerda o mesmo valor*/
+            margin: 10px 100px 150px 200px;  /*Box model - valores topo/direita/em baixo/esquerda sentido horário */
+        }
+
+        div {
+            border: inherit; /*propiedade para herdar borda*/
+            padding: inherit; /*propiedade para herdar padding*/
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Herança</h1>
+    <div>Estou herdando</div>
+</body>
+
+</html>

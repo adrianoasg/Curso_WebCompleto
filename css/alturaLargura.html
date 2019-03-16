@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Altura e Largura</title>
+    <style>
+        html{
+            height: 100%;
+        }
+        body {
+            font-size: 40px;
+            background-color: coral;
+        }
+
+        div {
+            background-color: seagreen;
+        }
+
+        span {
+            background-color: dodgerblue;
+        }
+
+         /* Com comportamento padrão a altura percentual só vai fazer diferença de acordo com a 
+        altura do parent, se o parent for curtinho e já estiver ocupando toda a altura o percentual de altura, 
+        não vai fazer diferença nenhuma. Porque por padrão a tag body e por padrão a tag html tem a altura que é equivalente 
+        o tamanho dos seus elementos  */
+
+        /*Tamanhos absolutos fazem com que o body cresça e o html cresça*/
+        /*Display inline não considera altura e largura*/
+        /*Display block ou inline-block considera altura e largura*/
+        span, div {
+            width: 50%; /*por padrão o body ocupa a largura toda do viweport*/ /*pode colocar 49% fica um espaço*/
+            height: 50%; /*por padrão o body não ocupa a altura toda do viweport*/
+            height: 250px; /*Com valor absoluto, faz com que o body aumente de tamanho*/
+           /* display: inline-block;*/ /*coloque esse para tirar o bug - e tem que tirar o espaço entre a div e o span*/
+            display: block;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <!--Cuidado bug do espaço-->  
+      <!--   <div>Título</div><span>Subtítulo</span>
+      -->
+    <div>Título</div> 
+    <span>Subtítulo</span>
+</body>
+
+</html>
