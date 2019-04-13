@@ -1,0 +1,15 @@
+help
+cls - limpa tela
+show dbs - mostra os dbs 
+use wm
+show dbs
+db.createCollection('estados')  - cria uma collection
+show dbs
+show collections - mostra as collections 
+db.createCollection('Estados')
+show collections
+db.Estados.drop()  -  exclui a collection
+show collections
+db.estados.drop()
+show collections
+show dbs
