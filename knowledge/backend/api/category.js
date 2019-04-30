@@ -2,7 +2,11 @@ module.exports = app => {
     const { existsOrError, notExistsOrError, equalsOrError } = app.api.validation
 
     const save = (req, res) => {
-        const category = { ...req.body }
+        const category = { 
+                id: req.body.id,
+                name: req.body.name,
+                parentId: req.body.parentId
+         }
         if (req.params.id) category.id = req.params.id
 
         try {
@@ -27,19 +31,19 @@ module.exports = app => {
 
     const remove = async (req, res) => {
         try {
-            existsOrError(req.params.id, 'Código da Categoria não foi informado.')
+            existsOrError(req.params.id, 'Código da Categoria não foi informado')
 
-            const subcategory = await app.db('categories.')
+            const subcategory = await app.db('categories')
                 .where({ parentId: req.params.id })
-            notExistsOrError(subcategory, 'Categoria possui subcategorias.')
+            notExistsOrError(subcategory, 'Categoria possui subcategorias')
 
             const articles = await app.db('articles')
                 .where({ categoryId: req.params.id })
-            notExistsOrError(articles, 'Categoria possui artigos.')
+            notExistsOrError(articles, 'Categoria possui artigos')
 
             const rowsDeleted = await app.db('categories')
                 .where({ id: req.params.id }).del()
-            existsOrError(rowsDeleted, 'Categoria não foi encontrada.')
+            existsOrError(rowsDeleted, 'Categoria não foi encontrada')
 
             res.status(204).send()
         } catch (msg) {
